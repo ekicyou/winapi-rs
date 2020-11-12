@@ -161,23 +161,23 @@ interface IDCompositionTarget(IDCompositionTargetVtbl): IUnknown(IUnknownVtbl) {
 }}
 RIDL!{#[uuid(0x4d93059d, 0x097b, 0x4651, 0x9a, 0x60, 0xf0, 0xf2, 0x51, 0x16, 0xe2, 0xf3)]
 interface IDCompositionVisual(IDCompositionVisualVtbl): IUnknown(IUnknownVtbl) {
-    fn SetOffsetX_2(
-        animation: *const IDCompositionAnimation,
-    ) -> HRESULT,
     fn SetOffsetX_1(
         offsetX: c_float,
     ) -> HRESULT,
-    fn SetOffsetY_2(
+    fn SetOffsetX_2(
         animation: *const IDCompositionAnimation,
     ) -> HRESULT,
     fn SetOffsetY_1(
         offsetY: c_float,
     ) -> HRESULT,
-    fn SetTransform_2(
-        transform: *const IDCompositionTransform,
+    fn SetOffsetY_2(
+        animation: *const IDCompositionAnimation,
     ) -> HRESULT,
     fn SetTransform_1(
         matrix: *const D2D_MATRIX_3X2_F,
+    ) -> HRESULT,
+    fn SetTransform_2(
+        transform: *const IDCompositionTransform,
     ) -> HRESULT,
     fn SetTransformParent(
         visual: *const IDCompositionVisual,
@@ -191,11 +191,11 @@ interface IDCompositionVisual(IDCompositionVisualVtbl): IUnknown(IUnknownVtbl) {
     fn SetBorderMode(
         borderMode: DCOMPOSITION_BORDER_MODE,
     ) -> HRESULT,
-    fn SetClip_2(
-        clip: *const IDCompositionClip,
-    ) -> HRESULT,
     fn SetClip_1(
         rect: *const D2D_RECT_F,
+    ) -> HRESULT,
+    fn SetClip_2(
+        clip: *const IDCompositionClip,
     ) -> HRESULT,
     fn SetContent(
         content: *const IUnknown,
