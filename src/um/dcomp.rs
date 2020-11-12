@@ -240,29 +240,29 @@ interface IDCompositionTranslateTransform(IDCompositionTranslateTransformVtbl):
 RIDL!{#[uuid(0x71fde914, 0x40ef, 0x45ef, 0xbd, 0x51, 0x68, 0xb0, 0x37, 0xc3, 0x39, 0xf9)]
 interface IDCompositionScaleTransform(IDCompositionScaleTransformVtbl):
     IDCompositionTransform(IDCompositionTransformVtbl) {
-    fn SetScaleX_2(
-        animation: *const IDCompositionAnimation,
-    ) -> HRESULT,
     fn SetScaleX_1(
         scaleX: c_float,
     ) -> HRESULT,
-    fn SetScaleY_2(
+    fn SetScaleX_2(
         animation: *const IDCompositionAnimation,
     ) -> HRESULT,
     fn SetScaleY_1(
         scaleY: c_float,
     ) -> HRESULT,
-    fn SetCenterX_2(
+    fn SetScaleY_2(
         animation: *const IDCompositionAnimation,
     ) -> HRESULT,
     fn SetCenterX_1(
         centerX: c_float,
     ) -> HRESULT,
-    fn SetCenterY_2(
+    fn SetCenterX_2(
         animation: *const IDCompositionAnimation,
     ) -> HRESULT,
     fn SetCenterY_1(
         centerY: c_float,
+    ) -> HRESULT,
+    fn SetCenterY_2(
+        animation: *const IDCompositionAnimation,
     ) -> HRESULT,
 }}
 RIDL!{#[uuid(0x641ed83c, 0xae96, 0x46c5, 0x90, 0xdc, 0x32, 0x77, 0x4c, 0xc5, 0xc6, 0xd5)]
