@@ -226,7 +226,8 @@ interface IDCompositionTranslateTransform(IDCompositionTranslateTransformVtbl):
     IDCompositionTransform(IDCompositionTransformVtbl) {
     fn SetOffsetX_1(
         offsetX: c_float,
-    ) -> HRESULT,    fn SetOffsetX_2(
+    ) -> HRESULT,
+    fn SetOffsetX_2(
         animation: *const IDCompositionAnimation,
     ) -> HRESULT,
     fn SetOffsetY_1(
